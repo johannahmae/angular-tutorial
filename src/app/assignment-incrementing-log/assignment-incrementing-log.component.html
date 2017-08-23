@@ -1,5 +1,10 @@
-<input [(ngModel)]="content">
-<button (click)="onSubmit()">Submit</button>
+<input [(ngModel)]="content" #inpuBox>
+<button (click)="onSubmit(appAlert)">Submit</button>
+<app-alert-success
+  (closed)="onAppAlertClosed($event)"
+  [message]="message.length > 0 ? message : ''"
+  #appAlert>
+</app-alert-success>
 <p></p>
 <ul>
   <li *ngFor="let blob of blobs" [ngClass]="blob.id >= 5 ? 'blue' : ''">

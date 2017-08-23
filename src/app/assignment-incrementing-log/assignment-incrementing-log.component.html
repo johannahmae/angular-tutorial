@@ -3,8 +3,8 @@
 <button (click)="onSubmit(appAlert)">Submit</button>
 <app-alert-success
   (closed)="onAppAlertClosed($event)"
-  [message]="message.length > 0 ? message : ''"
   #appAlert>
+  <p>{{message}}</p>
 </app-alert-success>
 <p></p>
 <ul>

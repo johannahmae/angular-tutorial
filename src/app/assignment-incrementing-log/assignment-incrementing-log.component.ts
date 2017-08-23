@@ -32,7 +32,7 @@ export class AssignmentIncrementingLogComponent implements OnInit {
     });
     this.message = `added ${this.content}`;
     this.content = '';
-    await appAlert.show(10000);
+    await appAlert.show(1000);
   }
 
   onAppAlertClosed(e: ClosedEvent) {

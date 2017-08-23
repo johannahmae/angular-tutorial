@@ -1,7 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 export interface ClosedEvent {
-  name: string;
   timestamp: Date;
   duration: number;
   totalDuration: number;
@@ -16,11 +15,9 @@ export class AlertSuccessComponent implements OnInit {
   initialShow: Date;
   lastShow: Date;
   visible: boolean;
-  @Input() message: string;
   @Output() closed: EventEmitter<ClosedEvent> = new EventEmitter();
 
   constructor() {
-    this.message = '';
     this.visible = false;
   }
 
@@ -39,16 +36,11 @@ export class AlertSuccessComponent implements OnInit {
       }
       this.visible = false;
       this.closed.emit({
-        name: `some event ${this.message}`,
         timestamp: new Date(),
         duration: (new Date).valueOf() - this.lastShow.valueOf(),
         totalDuration: (new Date).valueOf() - this.initialShow.valueOf(),
       });
     }
-  }
-
-  getOutput(): string {
-    return this.message ? this.message : 'Ok';
   }
 
   ngOnInit() {

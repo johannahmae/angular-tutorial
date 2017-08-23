@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { AlertWarningComponent } from './alert-warning/alert-warning.component';
 import { AlertSuccessComponent } from './alert-success/alert-success.component';
 import { AssignmentUsernameComponent } from './assignment-username/assignment-username.component';
+import { AssignmentIncrementingLogComponent } from './assignment-incrementing-log/assignment-incrementing-log.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AssignmentUsernameComponent } from './assignment-username/assignment-us
     ServersComponent,
     AlertWarningComponent,
     AlertSuccessComponent,
-    AssignmentUsernameComponent
+    AssignmentUsernameComponent,
+    AssignmentIncrementingLogComponent
   ],
   imports: [
     BrowserModule,

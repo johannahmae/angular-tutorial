@@ -1,4 +1,5 @@
 <input [(ngModel)]="content" #inpuBox>
+<input #contentType>
 <button (click)="onSubmit(appAlert)">Submit</button>
 <app-alert-success
   (closed)="onAppAlertClosed($event)"
